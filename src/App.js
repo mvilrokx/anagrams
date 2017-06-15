@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Anagrams from './Anagrams.js'
 import sampleData from './sampleData.js'
+import ExpandableWordList from './ExpandableWordList.js'
 
 const anagrams = new Anagrams()
 
@@ -27,9 +28,10 @@ class App extends Component {
     return (
       <div className='clearfix p2'>
         <div className="col-11 sm-col-11 md-col-6 lg-col-4 px2 mx-auto">
-          <ul>
-            {this.state.words.map(word => <li>{word}</li>)}
-          </ul>
+          <ExpandableWordList
+            words={this.state.words}
+            getAnagrams={anagrams.get.bind(anagrams)}
+          />
         </div>
       </div>
     );
