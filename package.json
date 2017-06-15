@@ -1,7 +1,8 @@
 {
   "name": "anagrams",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
+  "homepage" : "http://mvilrokx.github.io/anagrams",
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
