@@ -3,6 +3,7 @@ import Anagrams from './Anagrams.js'
 import sampleData from './sampleData.js'
 import ExpandableWordList from './ExpandableWordList.js'
 import FilterForm from './FilterForm.js'
+import AddForm from './AddForm.js'
 
 const anagrams = new Anagrams()
 
@@ -38,6 +39,8 @@ class App extends Component {
             words={this.state.words}
             getAnagrams={anagrams.get.bind(anagrams)}
           />
+          <hr/>
+          <AddForm add={this.add} />
         </div>
       </div>
     );
