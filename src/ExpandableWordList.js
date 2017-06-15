@@ -25,6 +25,7 @@ class ExpandableWordList extends Component {
   }
 
   renderWordList = (words) => words
+    .filter(word => word.toLowerCase().includes(this.props.filterText.toLowerCase()))
     .map(word =>
       <li key={word} onClick={this.clickHandler(word)} className="unique-word list-reset">
         {word}
